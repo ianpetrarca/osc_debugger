@@ -31,39 +31,78 @@ vorpal.command('start server')
     });
 
     promise.then(function(answers) {
-        self.log(answers.name + 'started on: ' + answers.address + ":" + answers.port );
+        self.log(answers.name + ' started on: ' + answers.address + ":" + answers.port );
       cb();
     });
   });
 
-  vorpal.command('send messages')
+
+
+  vorpal.command('start client')
     .action(function (args, cb) {
       var self = this;
 
       var promise = this.prompt([
         {
           type: 'input',
-          name: 'message',
-          message: 'Message:'
+          name: 'name',
+          message: 'Name: '
         },
         {
           type: 'input',
-          name: 'time',
-          message: 'Interval (Ms): '
+          name: 'address',
+          message: 'Address: '
+        },
+        {
+          type: 'input',
+          name: 'port',
+          message: 'Port: '
         }
       ], function (answers) {
-          var client = new osc.Client('127.0.0.1', 3333);
-          setInterval(function(){
-            client.send(answers.message);
-         }, answers.time);
-
+          var serverName = answers.name;
+          var address = answers.address;
+          var port= answers.port;
+          var client = new osc.Client(address, port);
+          client.send('/oscAddress', 200, function () {
+              client.kill();
+          });
       });
 
       promise.then(function(answers) {
-          self.log('OSC Server started on: ' + answers.address + ":" + answers.port );
+          self.log(answers.name + ' started on: ' + answers.address + ":" + answers.port );
         cb();
       });
     });
+
+
+    vorpal.command('send messages')
+     .action(function (args, cb) {
+       var self = this;
+
+       var promise = this.prompt([
+         {
+           type: 'input',
+           name: 'message',
+           message: 'Message:'
+         },
+         {
+           type: 'input',
+           name: 'time',
+           message: 'Interval (Ms): '
+         }
+       ], function (answers) {
+           var client = new osc.Client('127.0.0.1', 3333);
+           setInterval(function(){
+             client.send(answers.message);
+          }, answers.time);
+
+       });
+
+       promise.then(function(answers) {
+           self.log('OSC Server started on: ' + answers.address + ":" + answers.port );
+         cb();
+       });
+     });
 
 
 
