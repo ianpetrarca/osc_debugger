@@ -1,0 +1,15 @@
+{
+  "name": "osc_cli",
+  "version": "1.0.0",
+  "description": "command line tool for OSC servers and clients ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-osc": "^2.0.4",
+    "vorpal": "^1.11.4"
+  }
+}
