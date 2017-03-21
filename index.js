@@ -75,7 +75,7 @@ vorpal.command('start server')
     });
 
 
-    vorpal.command('send messages')
+    vorpal.command('send group')
      .action(function (args, cb) {
        var self = this;
 
@@ -103,6 +103,54 @@ vorpal.command('start server')
          cb();
        });
      });
+
+     vorpal.command('send message')
+      .action(function (args, cb) {
+        var self = this;
+
+        var promise = this.prompt([
+          {
+            type: 'input',
+            name: 'message',
+            message: 'Message:'
+          },
+          {
+            type: 'input',
+            name: 'arg',
+            message: 'Argument:'
+          },
+          {
+            type: 'input',
+            name: 'address',
+            message: 'Address: '
+          },
+          {
+            type: 'input',
+            name: 'port',
+            message: 'Port: '
+          }
+
+
+
+        ], function (answers) {
+            var message = answers.message;
+            var argument = answers.arg;
+            var address = answers.address;
+            var port= answers.port;
+            var client = new osc.Client(address, port);
+            client.send(message, argument, function () {
+                client.kill();
+            });
+
+
+
+        });
+
+        promise.then(function(answers) {
+            self.log('OSC Server started on: ' + answers.address + ":" + answers.port );
+          cb();
+        });
+      });
 
 
 
