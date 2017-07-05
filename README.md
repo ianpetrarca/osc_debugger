@@ -9,7 +9,7 @@ This CLI allows you to quickly send, monitor and test OSC based systems. Fire up
 
 # Start Server 
 
-In order to accept OSC messages you must start a server that listens for messages on a specified # IP address and # port
+In order to accept OSC messages you must start a server that listens for messages on a specified *IP ADDRESS*
 
     node . 
     start server 
