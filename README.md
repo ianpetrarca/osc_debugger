@@ -2,6 +2,11 @@
 
 ## Installation
 
+Third Party Libraries Used:
+
+Vorpal - CLI library - https://github.com/dthree/vorpal
+Node OSC - OSC library - https://github.com/MylesBorins/node-osc
+
 OSC Debugger requires that you have Node and NPM installed on your local computer. It can be downloaded in a.zip or cloned:
 
     git clone https://github.com/ianpetrarca/osc_tool_kit.git
