@@ -2,7 +2,7 @@
 
 ## Installation
 
-OSC Debugger requires that you have Node and NPM installed on your local computer. It can be downloaded in .zip for or cloned:
+OSC Debugger requires that you have Node and NPM installed on your local computer. It can be downloaded in a.zip or cloned:
 
     git clone https://github.com/ianpetrarca/osc_tool_kit.git
     cd osc_tool_kit
