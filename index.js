@@ -147,7 +147,7 @@ vorpal.command('start server')
         });
 
         promise.then(function(answers) {
-            self.log('OSC Server started on: ' + answers.address + ":" + answers.port );
+            self.log('OSC Server Client on: ' + answers.address + ":" + answers.port );
           cb();
         });
       });
