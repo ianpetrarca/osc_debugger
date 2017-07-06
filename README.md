@@ -14,7 +14,7 @@ OSC Debugger allows you to monitor incoming OSC messages directly within the ter
     node . 
     start server 
 
-After you run the initial *start server* command you will be prompted to give a name, address and port. The name can be left blank if you prefer. I suggest labeling servers for the purpose of identifiying multiple servers in an OSC log. The **address** is the local IP address you would like to **recieve** messages on. The **port** is the TCP port in which your OSC client sends data to your OSC server. More on this below. After entering a name,address and port you will recieve a message that the OSC server has been started. 
+After you run the initial *start server* command you will be prompted to give a name, address and port. The name can be left blank if you prefer. I suggest labeling servers for the purpose of identifiying multiple servers in an OSC log. The **address** is the local IP address you would like to **recieve** messages on. The **port** is the TCP port in which your OSC client sends data to your OSC server. More on this below. After entering a name,address and port you will recieve a message that the OSC Server has been started. 
 
 # Send Message 
 
@@ -23,5 +23,5 @@ The *send message* command allows you to send OSC messages to OSC Debugger inter
     node . 
     send message 
 
-After you run the initial *send message* command you will be prompted to give a message, argument, address and port. The message field accepts standard OSC Message specifcation. For example: */test/osc/* The **address** is the local IP address you would like to **send** messages to. The **port** is the TCP port in which your OSC client sends data to your OSC server.
+After you run the initial *send message* command you will be prompted to give a message, argument, address and port. The message field accepts standard OSC Message specifcation. For example: */test/osc/* The **address** is the local IP address you would like to **send** messages to. The **port** is the TCP port in which your OSC Client sends data to your OSC Server.
 
