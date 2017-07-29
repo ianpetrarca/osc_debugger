@@ -21,6 +21,7 @@ To start OSC Debugger you will need to run the index.js file using Node, you can
 Or:
 
     node index.js 
+    
 You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed Messages*. 
 
 # Start OSC Server 
@@ -31,10 +32,7 @@ After you select the initial *Start OSC Server* command you will be prompted to 
 
 # Send OSC Message 
 
-The *send message* command allows you to send OSC messages to OSC Debugger internally or to external OSC applications. If you are building an interactive system that is built on top of OSC, this command can help test certain features of your system.
+The *Send Message* command allows you to send OSC messages to OSC Debugger internally or to external OSC applications. If you are building an interactive system that is built on top of OSC, this command can help test certain features of your system.
 
-    node . 
-    send message 
-
-After you run the initial *send message* command you will be prompted to give a message, argument, address and port. The message field accepts standard OSC Message specifcation. For example: */test/osc/* The **address** is the local IP address you would like to **send** messages to. The **port** is the TCP port in which your OSC Client sends data to your OSC Server.
+After you run the initial *Send Message* command you will be prompted to give a message, argument, address and port. The message field accepts standard OSC Message specifcation. For example: */test/osc/* The **address** is the local IP address you would like to **send** messages to. The **port** is the TCP port in which your OSC Client sends data to your OSC Server.
 
