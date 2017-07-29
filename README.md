@@ -27,7 +27,7 @@ You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed M
 
 OSC Debugger allows you to monitor incoming OSC messages directly within the terminal. In order to accept OSC messages you must start a server that listens for messages on a specified **IP Address** and **Port** this is done by selecting the *Start OSC Server* command. 
 
-After you select the initial *Start OSC Server* command you will be prompted to give an address and port. The **address** is the local IP address you would like to **recieve** messages on. The **port** is the TCP port in which your OSC client sends data to your OSC server through. More on this below. After entering an address and port you will recieve a message that the OSC Server has been started. 
+After you select the initial *Start OSC Server* command you will be prompted to give an address and port. The **address** is the local IP address you would like to **recieve** messages on. The **port** is the TCP port in which your OSC recieve messages through. More on this below. After entering an address and port you will recieve a message that the OSC Server has been started. 
 
 # Send Message 
 
