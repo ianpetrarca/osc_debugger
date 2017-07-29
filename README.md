@@ -16,20 +16,17 @@ OSC Debugger uses the third party libraries Inquirer (https://github.com/SBoudri
 
 
 To start OSC Debugger you will need to run the index.js file using Node, you can do this by using: 
-
     node . 
 Or:
 
     node index.js 
-    
-# Start Server 
+You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed Messages*. 
 
-OSC Debugger allows you to monitor incoming OSC messages directly within the terminal. In order to accept OSC messages you must start a server that listens for messages on a specified **IP Address** and **Port** this is done using the the *start server* command:
+# Start OSC Server 
 
-    node . 
-    start server 
+OSC Debugger allows you to monitor incoming OSC messages directly within the terminal. In order to accept OSC messages you must start a server that listens for messages on a specified **IP Address** and **Port** this is done by selecting the *Start OSC Server* command. 
 
-After you run the initial *start server* command you will be prompted to give a name, address and port. The name can be left blank if you prefer. I suggest labeling servers for the purpose of identifiying multiple servers in an OSC log. The **address** is the local IP address you would like to **recieve** messages on. The **port** is the TCP port in which your OSC client sends data to your OSC server. More on this below. After entering a name, address and port you will recieve a message that the OSC Server has been started. 
+After you select the initial *Start OSC Server* command you will be prompted to give an address and port. The **address** is the local IP address you would like to **recieve** messages on. The **port** is the TCP port in which your OSC client sends data to your OSC server through. More on this below. After entering an address and port you will recieve a message that the OSC Server has been started. 
 
 # Send Message 
 
