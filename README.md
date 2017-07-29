@@ -13,7 +13,7 @@ OSC Debugger requires that you have Node and NPM installed on your local compute
     cd osc_debugger
     npm install 
 
-<img width="902" alt="screen shot 2017-03-20 at 11 03 49 pm" src="https://cloud.githubusercontent.com/assets/1003196/24130872/84932a06-0dc1-11e7-9da1-11262c6a6d46.png">
+<img width="902" alt="screen shot 2017-03-20 at 11 03 49 pm" src="https://user-images.githubusercontent.com/1003196/28745592-41803576-7449-11e7-9de4-b208b0d0d1c1.png">
 
 
 This CLI allows you to quickly send, monitor and test OSC based systems. Fire up an OSC server quickly by running: 
