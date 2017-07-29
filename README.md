@@ -15,11 +15,13 @@ OSC Debugger uses the third party libraries Inquirer (https://github.com/SBoudri
 <img width="902" alt="screen shot 2017-03-20 at 11 03 49 pm" src="https://user-images.githubusercontent.com/1003196/28745592-41803576-7449-11e7-9de4-b208b0d0d1c1.png">
 
 
-This CLI allows you to quickly send, monitor and test OSC based systems. Fire up an OSC server quickly by running: 
+To start OSC Debugger you will need to run the index.js file using Node, you can do this by using: 
 
     node . 
-    start server 
+Or:
 
+    node index.js 
+    
 # Start Server 
 
 OSC Debugger allows you to monitor incoming OSC messages directly within the terminal. In order to accept OSC messages you must start a server that listens for messages on a specified **IP Address** and **Port** this is done using the the *start server* command:
