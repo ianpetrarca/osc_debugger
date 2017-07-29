@@ -2,16 +2,15 @@
 
 ## Installation
 
-Third Party Libraries Used:
-
-* Inquirer - CLI library - https://github.com/SBoudrias/Inquirer.js/
-* Node OSC - OSC library - https://github.com/MylesBorins/node-osc
-
-OSC Debugger requires that you have Node and NPM installed on your local computer. It can be downloaded in a.zip or cloned:
+OSC Debugger requires that you have Node and NPM installed on your local computer. To clone it from Github use:
 
     git clone https://github.com/ianpetrarca/osc_debugger.git
     cd osc_debugger
     npm install 
+    node .
+
+OSC Debugger uses the third party libraries Inquirer (https://github.com/SBoudrias/Inquirer.js/) and  Node OSC (https://github.com/MylesBorins/node-osc)
+
 
 <img width="902" alt="screen shot 2017-03-20 at 11 03 49 pm" src="https://user-images.githubusercontent.com/1003196/28745592-41803576-7449-11e7-9de4-b208b0d0d1c1.png">
 
