@@ -29,7 +29,7 @@ OSC Debugger allows you to monitor incoming OSC messages directly within the ter
 
 After you select the initial *Start OSC Server* command you will be prompted to give an address and port. The **address** is the local IP address you would like to **recieve** messages on. The **port** is the TCP port in which your OSC recieve messages through. More on this below. After entering an address and port you will recieve a message that the OSC Server has been started. 
 
-# Send Message 
+# Send OSC Message 
 
 The *send message* command allows you to send OSC messages to OSC Debugger internally or to external OSC applications. If you are building an interactive system that is built on top of OSC, this command can help test certain features of your system.
 
