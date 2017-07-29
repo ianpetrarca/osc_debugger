@@ -34,5 +34,12 @@ After you select the initial *Start OSC Server* command you will be prompted to 
 
 The *Send Message* command allows you to send OSC messages to OSC Debugger internally or to external OSC applications. If you are building an interactive system that is built on top of OSC, this command can help test certain features of your system.
 
-After you run the initial *Send Message* command you will be prompted to give a message, argument, address and port. The message field accepts standard OSC Message specifcation. For example: */test/osc/* The **address** is the local IP address you would like to **send** messages to. The **port** is the TCP port in which your OSC Client sends data to your OSC Server.
+After you run the initial *Send OSC Message* command you will be prompted to give an address, port, message and argument. The message field accepts standard OSC Message specifcation. For example: */test/osc/* and the **argument** accepts a 4 digit integer. The **address** is the local IP address you would like to **send** messages to. The **port** is the TCP port in which your OSC Client sends data to your OSC Server.
+
+# Send Timed Messages
+
+The *Send Timed Message* command allows you to send OSC messages at a millisecond interval.
+
+
+
 
