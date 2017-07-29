@@ -16,6 +16,7 @@ OSC Debugger uses the third party libraries Inquirer (https://github.com/SBoudri
 
 
 To start OSC Debugger you will need to run the index.js file using Node, you can do this by using: 
+
     node . 
 Or:
 
