@@ -1,161 +1,136 @@
-const vorpal = require('vorpal')();
+//Libraries
 var osc = require('node-osc');
+var inquirer = require('inquirer');
 
+//Main Program Function
+function start() {
+  console.log('OSC Debugger');
+  setState();
+}
 
-vorpal.command('start server')
-  .action(function (args, cb) {
-    var self = this;
-
-    var promise = this.prompt([
-      {
-        type: 'input',
-        name: 'name',
-        message: 'Name: '
-      },
-      {
-        type: 'input',
-        name: 'address',
-        message: 'Address: '
-      },
-      {
-        type: 'input',
-        name: 'port',
-        message: 'Port: '
-      }
-    ], function (answers) {
-        var serverName = answers.name;
-        var oscServer = new osc.Server(answers.port, answers.address);
-        oscServer.on("message", function (msg, rinfo) {
-              console.log(msg);
-        });
-    });
-
-    promise.then(function(answers) {
-        self.log(answers.name + ' started on: ' + answers.address + ":" + answers.port );
-      cb();
-    });
+//Set the State
+function setState() {
+  inquirer.prompt(mainPrompt).then(function (answers) {
+    if (answers.function  === 'Start OSC Server') {
+        startServer();
+    } else if (answers.function  === 'Send OSC Message') {
+        sendMessage();
+    } else if (answers.function  === 'Send Timed Messages') {
+        timedMessages();
+    } else if (answers.function  === 'View Saved Servers') {
+        viewServers();
+    }
   });
+}
 
+//Opening Prompt
+var mainPrompt = {
+  type: 'list',
+  name: 'function',
+  message: 'What would you like to do?',
+  choices: ['Start OSC Server',
+    'Send OSC Message',
+    'Send Timed Messages',new inquirer.Separator(),
+    'Exit']
+};
 
+//Server Function
+function startServer() {
+  inquirer.prompt(serverPrompt).then(function (answers) {
+    //Start Server
+    var oscServer = new osc.Server(answers.port, answers.address);
+    oscServer.on("message", function (msg, rinfo) { console.log(msg);});
 
-  vorpal.command('start client')
-    .action(function (args, cb) {
-      var self = this;
-
-      var promise = this.prompt([
-        {
-          type: 'input',
-          name: 'name',
-          message: 'Name: '
-        },
-        {
-          type: 'input',
-          name: 'address',
-          message: 'Address: '
-        },
-        {
-          type: 'input',
-          name: 'port',
-          message: 'Port: '
-        }
-      ], function (answers) {
-          var serverName = answers.name;
-          var address = answers.address;
-          var port= answers.port;
-          var client = new osc.Client(address, port);
-          client.send('/oscAddress', 200, function () {
-              client.kill();
-          });
+    //Send Test Message
+     var client = new osc.Client(answers.address, answers.port);
+      client.send("/Server/Started", 100, function () {
+          client.kill();
       });
+  });
+};
 
-      promise.then(function(answers) {
-          self.log(answers.name + ' started on: ' + answers.address + ":" + answers.port );
-        cb();
+//Server Prompt
+var serverPrompt = [
+  {
+    type: 'input',
+    name: 'address',
+    message: 'Address?'
+  },
+  {
+    type: 'input',
+    name: 'port',
+    message: 'Port?'
+  }
+];
+
+//Message Function
+function sendMessage() {
+  inquirer.prompt(messagePrompt).then(function (answers) {
+     var client = new osc.Client(answers.address, answers.port);
+      client.send(answers.message, answers.arg, function () {
+          client.kill();
       });
-    });
+  });
+};
+//Message Prompts
+var messagePrompt = [
+  {
+    type: 'input',
+    name: 'address',
+    message: 'Address?'
+  },
+  {
+    type: 'input',
+    name: 'port',
+    message: 'Port?'
+  },
+  {
+    type: 'input',
+    name: 'message',
+    message: 'Message?'
+  },
+  {
+    type: 'input',
+    name: 'arg',
+    message: 'Argument?'
+  }
+];
 
+//Timed Messages Function
+function timedMessages(){
+   inquirer.prompt(timedPrompt).then(function (answers) {
+    //Send  Message
+     var client = new osc.Client(answers.address, answers.port);
+     setInterval(function(){ client.send(answers.message,answers.arg)}, answers.time)});
+}
 
-    vorpal.command('send group')
-     .action(function (args, cb) {
-       var self = this;
+//Timed Messaged Prompt
+var timedPrompt = [
+  {
+    type: 'input',
+    name: 'address',
+    message: 'Address?'
+  },
+  {
+    type: 'input',
+    name: 'port',
+    message: 'Port?'
+  },
+  {
+    type: 'input',
+    name: 'message',
+    message: 'Message?'
+  },
+  {
+    type: 'input',
+    name: 'arg',
+    message: 'Argument?'
+  },
+  {
+    type: 'input',
+    name: 'time',
+    message: 'Interval in milliseconds?'
+  }
+];
 
-       var promise = this.prompt([
-         {
-           type: 'input',
-           name: 'message',
-           message: 'Message:'
-         },
-         {
-           type: 'input',
-           name: 'time',
-           message: 'Interval (Ms): '
-         }
-       ], function (answers) {
-           var client = new osc.Client('127.0.0.1', 3333);
-           setInterval(function(){
-             client.send(answers.message);
-          }, answers.time);
-
-       });
-
-       promise.then(function(answers) {
-           self.log('OSC Server started on: ' + answers.address + ":" + answers.port );
-         cb();
-       });
-     });
-
-     vorpal.command('send message')
-      .action(function (args, cb) {
-        var self = this;
-
-        var promise = this.prompt([
-          {
-            type: 'input',
-            name: 'message',
-            message: 'Message:'
-          },
-          {
-            type: 'input',
-            name: 'arg',
-            message: 'Argument:'
-          },
-          {
-            type: 'input',
-            name: 'address',
-            message: 'Address: '
-          },
-          {
-            type: 'input',
-            name: 'port',
-            message: 'Port: '
-          }
-
-
-
-        ], function (answers) {
-            var message = answers.message;
-            var argument = answers.arg;
-            var address = answers.address;
-            var port= answers.port;
-            var client = new osc.Client(address, port);
-            client.send(message, argument, function () {
-                client.kill();
-            });
-
-
-
-        });
-
-        promise.then(function(answers) {
-            self.log('OSC Server Client on: ' + answers.address + ":" + answers.port );
-          cb();
-        });
-      });
-
-
-
-
-
-vorpal
-  .show()
-  .parse(process.argv);
+start();
