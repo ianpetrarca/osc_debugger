@@ -23,8 +23,6 @@ Or:
     node index.js 
  
  
- '<div style='position:relative;padding-bottom:54%'><iframe src='https://gfycat.com/ifr/UntriedConcreteCopperbutterfly' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0' allowfullscreen></iframe></div>'
- 
 You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed Messages*. 
 
 ## Example Footage
