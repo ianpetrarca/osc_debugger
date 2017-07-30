@@ -25,11 +25,6 @@ Or:
  
 You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed Messages*. 
 
-[[ (https://user-images.githubusercontent.com/1003196/28753634-82deb06c-7505-11e7-98aa-21b89fcbd0ce.gif)  | width = 300px ]]
-
-
-
-
 # Start OSC Server 
 
 <img width="1082" alt="screen shot 2017-07-30 at 9 10 07 am" src="https://user-images.githubusercontent.com/1003196/28753743-00e9eebc-7507-11e7-98fb-49e885526ad5.png">
