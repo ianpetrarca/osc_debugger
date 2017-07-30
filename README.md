@@ -25,9 +25,9 @@ Or:
  
 You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed Messages*. 
 
-![osc2](https://user-images.githubusercontent.com/1003196/28753634-82deb06c-7505-11e7-98aa-21b89fcbd0ce.gif) 
+[[ (https://user-images.githubusercontent.com/1003196/28753634-82deb06c-7505-11e7-98aa-21b89fcbd0ce.gif)  | width = 300px ]]
 
-[[ https://gfycat.com/gifs/detail/EssentialDearAurochs | height = 100px ]]
+
 
 
 # Start OSC Server 
