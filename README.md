@@ -27,9 +27,9 @@ You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed M
 
 ## Example Footage
 
-```html
+``
 <iframe src='https://gfycat.com/ifr/UntriedConcreteCopperbutterfly' frameborder='0' scrolling='no' width='2432' height='1352' allowfullscreen></iframe>
-```
+``
 
 # Start OSC Server 
 
