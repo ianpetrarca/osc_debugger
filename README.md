@@ -40,6 +40,7 @@ After you run the initial *Send OSC Message* command you will be prompted to giv
 
 The *Send Timed Message* command allows you to send OSC messages at a millisecond interval.
 
-![Alt Text]<iframe src='https://gfycat.com/ifr/HopefulComplexIguanodon' frameborder='0' scrolling='no' width='1140' height='1204' allowfullscreen></iframe>
+![osc](https://user-images.githubusercontent.com/1003196/28753566-0c25c6fa-7504-11e7-8021-2107ef54ea9d.gif)
+
 
 
