@@ -26,7 +26,8 @@ You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed M
 
 ## Example Footage
 
-![osc](https://user-images.githubusercontent.com/1003196/28753566-0c25c6fa-7504-11e7-8021-2107ef54ea9d.gif)
+![osc2](https://user-images.githubusercontent.com/1003196/28753634-82deb06c-7505-11e7-98aa-21b89fcbd0ce.gif)
+
 
 # Start OSC Server 
 
