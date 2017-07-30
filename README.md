@@ -25,12 +25,6 @@ Or:
  
 You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed Messages*. 
 
-## Example Footage
-
-``
-<iframe src='https://gfycat.com/ifr/UntriedConcreteCopperbutterfly' frameborder='0' scrolling='no' width='2432' height='1352' allowfullscreen></iframe>
-``
-
 # Start OSC Server 
 
 OSC Debugger allows you to monitor incoming OSC messages directly within the terminal. In order to accept OSC messages you must start a server that listens for messages on a specified **IP Address** and **Port** this is done by selecting the *Start OSC Server* command. 
