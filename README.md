@@ -27,17 +27,23 @@ You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed M
 
 # Start OSC Server 
 
+<img width="1082" alt="screen shot 2017-07-30 at 9 10 07 am" src="https://user-images.githubusercontent.com/1003196/28753743-00e9eebc-7507-11e7-98fb-49e885526ad5.png">
+
 OSC Debugger allows you to monitor incoming OSC messages directly within the terminal. In order to accept OSC messages you must start a server that listens for messages on a specified **IP Address** and **Port** this is done by selecting the *Start OSC Server* command. 
 
 After you select the initial *Start OSC Server* command you will be prompted to give an address and port. The **address** is the local IP address you would like to **recieve** messages on. The **port** is the TCP port in which your OSC recieve messages through. More on this below. After entering an address and port you will recieve a message that the OSC Server has been started. 
 
 # Send OSC Message 
 
+<img width="1082" alt="screen shot 2017-07-30 at 9 10 51 am" src="https://user-images.githubusercontent.com/1003196/28753744-00f52c50-7507-11e7-97f8-66caea3f69bf.png">
+
+
 The *Send Message* command allows you to send OSC messages to OSC Debugger internally or to external OSC applications. If you are building an interactive system that is built on top of OSC, this command can help test certain features of your system.
 
 After you run the initial *Send OSC Message* command you will be prompted to give an address, port, message and argument. The message field accepts standard OSC Message specifcation. For example: */test/osc/* and the **argument** accepts a 4 digit integer. The **address** is the local IP address you would like to **send** messages to. The **port** is the TCP port in which your OSC Client sends data to your OSC Server.
 
 # Send Timed Messages
+<img width="1082" alt="screen shot 2017-07-30 at 9 10 33 am" src="https://user-images.githubusercontent.com/1003196/28753745-00f637b2-7507-11e7-9406-74e1a3b13c0c.png">
 
 The *Send Timed Message* command allows you to send OSC messages at a millisecond interval.
 
