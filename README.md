@@ -1,11 +1,5 @@
 # OSC Debugger
 
-
-![osc](https://user-images.githubusercontent.com/1003196/28753566-0c25c6fa-7504-11e7-8021-2107ef54ea9d.gif)
-
-
-
-
 ## Installation
 
 OSC Debugger requires that you have Node and NPM installed on your local computer. To begin using it use the following commands:
@@ -29,6 +23,8 @@ Or:
     node index.js 
     
 You will be prompted to *Start OSC Server*, *Send OSC Message* and *Send Timed Messages*. 
+
+![osc](https://user-images.githubusercontent.com/1003196/28753566-0c25c6fa-7504-11e7-8021-2107ef54ea9d.gif)
 
 # Start OSC Server 
 
